@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+<RelativeLayout
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -35,16 +39,14 @@
         android:textSize="20sp"
         android:layout_below="@+id/overview_tv"
         android:layout_marginTop="20dp"
-        android:text="Path" />
+        android:text="Poster" />
 
-    <TextView
+    <ImageView
         android:id="@+id/path_tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/path_label_tv"
         android:layout_marginTop="10dp"
-        android:layout_marginLeft="50dp"
-        android:textSize="15sp"
         android:text="Path info" />
 
     <TextView
@@ -109,4 +111,6 @@
         android:layout_marginLeft="50dp"
         android:layout_below="@+id/vote_avg_label_tv"
         android:text="Vote Avg Info" />
+
 </RelativeLayout>
+</ScrollView>

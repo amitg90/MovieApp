@@ -1,13 +1,7 @@
 package com.example.amit.movieapp;
 
-import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
-import android.view.Gravity;
-import android.widget.GridLayout;
-import android.widget.ImageView;
-
-import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
 import org.json.JSONException;

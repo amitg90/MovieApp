@@ -4,8 +4,11 @@ import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.squareup.picasso.Picasso;
 
 import static android.provider.AlarmClock.EXTRA_MESSAGE;
 
@@ -31,9 +34,14 @@ public class MovieDetail extends Activity {
         movieInfo = MovieDB.movieInfoArrayList.get(position);
 
         // Capture the layout's TextView and set the string as its text
+        ImageView imageView;
         TextView textView;
-        textView = findViewById(R.id.path_tv);
-        textView.setText(MovieDbUtils.IMAGE_BASE_URL + movieInfo.path);
+        String imageUri;
+        imageView = findViewById(R.id.path_tv);
+        imageUri = MovieDbUtils.IMAGE_BASE_URL + movieInfo.path;
+        Picasso.with(this)
+                .load(imageUri)
+                .into(imageView);
 
         textView = findViewById(R.id.title_tv);
         textView.setText(movieInfo.title);
